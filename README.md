@@ -40,3 +40,10 @@ Unpaired UTF-16 surrogates cannot be represented in UTF-8. `TextEncoder` replace
 - `isEncoded(input: string): boolean` — true if the string contains at least one complete, well-formed `%XX` escape. Cheap predicate, not a full validator.
 
 All exported functions reject non-string arguments with a `TypeError`.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
