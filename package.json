@@ -1,6 +1,6 @@
 {
   "name": "percent-encoding-tools",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Converts JavaScript strings to and from URL-safe percent escapes at byte level.",
   "type": "module",
   "main": "src/index.js",
